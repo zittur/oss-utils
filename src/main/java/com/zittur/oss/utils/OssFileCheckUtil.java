@@ -24,7 +24,7 @@ public class OssFileCheckUtil {
         saveResult2Local(missingFiles);
     }
 
-    //step1 : 用 JDBC 连接数据库，查询 fx_tansat 表下的 loaderinfo 字段数据
+    //step1 : 用 JDBC 连接数据库，查询指定表下的文件路径字段数据
     private static List<String> getLoaderInfoList() {
         Connection connection = null;
         Statement statement = null;
@@ -34,9 +34,9 @@ public class OssFileCheckUtil {
             connection = DriverManager.getConnection(conf.getDatabase(), conf.getUser(), conf.getPassword());
             connection.setAutoCommit(false);
             statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("SELECT loaderinfo FROM fx_tansat");
+            ResultSet resultSet = statement.executeQuery("<YOUR SQL HERE>"); // 填写 SQL 语句
             while (resultSet.next()) {
-                String loaderinfo = resultSet.getString("loaderinfo");
+                String loaderinfo = resultSet.getString("填写字段名称");
                 if (loaderinfo != null) {
                     loaderInfoList.add(loaderinfo);
                 }
