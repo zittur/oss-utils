@@ -1,4 +1,4 @@
-package com.zittur.oss.utils.bean;
+package com.zittur.oss.conf;
 
 import com.typesafe.config.Config;
 import com.typesafe.config.ConfigFactory;

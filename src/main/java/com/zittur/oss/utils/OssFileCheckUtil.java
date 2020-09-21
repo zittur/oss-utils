@@ -1,8 +1,8 @@
-package com.zittur.oss.utils.sample;
+package com.zittur.oss.utils;
 
 import com.aliyun.oss.OSS;
 import com.aliyun.oss.OSSClientBuilder;
-import com.zittur.oss.utils.bean.GlobalConf;
+import com.zittur.oss.conf.GlobalConf;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -10,7 +10,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TanSatsOssUtils {
+public class OssFileCheckUtil {
 
     static GlobalConf conf = GlobalConf.getInstance();
 
